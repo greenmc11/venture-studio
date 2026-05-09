@@ -1,0 +1,38 @@
+:root { --bg:#f5f7f3; --text:#1f2421; --line:#d6ddd8; --pri:#0f6a4a; }
+*{box-sizing:border-box} body{margin:0;font-family:Arial,"Noto Sans KR",sans-serif;background:var(--bg);color:var(--text)}
+.container{width:min(1100px,calc(100% - 40px));margin:0 auto}
+.header{position:sticky;top:0;background:#f5f7f3;border-bottom:1px solid var(--line)}
+.nav{height:68px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand-wrap{display:flex;flex-direction:column;line-height:1.1;min-width:200px}
+.brand{font-weight:700;font-size:40px}
+.brand-sub{font-size:13px;color:#4f5d55;font-weight:500}
+.nav-menu{display:flex;align-items:center;gap:34px}
+.nav-menu a{position:relative;text-decoration:none;color:#1f2421;font-weight:600;font-size:15px;padding:6px 8px}
+.nav-menu a::after{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:50%;
+  width:68px;
+  height:36px;
+  border:2px solid transparent;
+  border-radius:50%;
+  transform:translate(-50%,-50%) rotate(-8deg) scale(.8);
+  transition:all .18s ease;
+  pointer-events:none;
+}
+.nav-menu a:hover::after,
+.nav-menu a:focus-visible::after{
+  border-color:#2c6f59;
+  transform:translate(-50%,-50%) rotate(-8deg) scale(1);
+}
+.btn{background:var(--pri);color:#fff;border:0;border-radius:10px;padding:10px 14px;cursor:pointer;text-decoration:none;display:inline-block}
+.btn-outline{background:#fff;color:var(--text);border:1px solid #bcc7c0}
+.hero{display:grid;grid-template-columns:1.2fr 1fr;gap:16px;padding:40px 0}.hero h1{font-size:44px;line-height:1.15;margin:0 0 8px}.actions{display:flex;gap:10px;margin-top:16px}
+.visual{min-height:260px;border:1px solid var(--line);border-radius:14px;background:#fff;padding:16px;font-weight:700;color:#355f50;display:flex;align-items:flex-end}
+section{padding:26px 0} h2{margin:0 0 14px}.grid{display:grid;gap:10px}.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px}.card h3{margin:0 0 6px}.card p{margin:0;color:#4d5953}
+.form{display:flex;flex-direction:column;gap:10px;max-width:560px}.form input,.form textarea{padding:11px;border:1px solid #cfd8d2;border-radius:8px;font:inherit}.form textarea{min-height:120px}
+@media (max-width:1000px){.nav-menu{display:none}}
+@media (max-width:900px){.hero{grid-template-columns:1fr}.g4{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.g4{grid-template-columns:1fr}.actions{flex-direction:column}.btn{width:100%}.brand{font-size:30px}.brand-sub{font-size:12px}}
