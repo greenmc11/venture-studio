@@ -572,7 +572,7 @@ export default function Home() {
                   </p>
                 </div>
 
-                <div className="mt-8 flex w-full max-w-5xl flex-col items-start gap-5 sm:mt-9 sm:flex-row sm:items-start sm:gap-8 md:mt-10 md:gap-10">
+                <div className="mt-14 flex w-full max-w-5xl flex-col items-start gap-5 sm:mt-16 sm:flex-row sm:items-start sm:gap-8 md:mt-20 md:gap-10">
                   <p className="max-w-3xl text-left text-[1.35rem] font-bold leading-snug tracking-tight text-[#1565c0] sm:text-[1.45rem] md:text-2xl md:leading-tight lg:text-[1.7rem]">
                     소풍 벤처스와 함께 미래를 만들어갈 초기 창업자를 모십니다
                   </p>
