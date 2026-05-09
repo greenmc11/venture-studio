@@ -559,7 +559,7 @@ export default function Home() {
                   </span>
                   .
                 </h1>
-                <div className="mt-12 w-full max-w-2xl space-y-6 text-left text-lg leading-[1.65] text-neutral-700 md:mt-16 md:text-xl md:leading-[1.6]">
+                <div className="mt-5 w-full max-w-2xl space-y-5 text-left text-lg leading-[1.65] text-neutral-700 md:mt-7 md:space-y-5 md:text-xl md:leading-[1.6]">
                   <p>
                     급변하는 AI 시대,
                     <br />
@@ -571,19 +571,24 @@ export default function Home() {
                     미래를 이끌어갈 회사를 직접 만듭니다.
                   </p>
                 </div>
+
+                <div className="mt-8 flex w-full max-w-5xl flex-col items-start gap-5 sm:mt-9 sm:flex-row sm:items-start sm:gap-8 md:mt-10 md:gap-10">
+                  <p className="max-w-3xl text-left text-[1.35rem] font-bold leading-snug tracking-tight text-[#1565c0] sm:text-[1.45rem] md:text-2xl md:leading-tight lg:text-[1.7rem]">
+                    소풍 벤처스와 함께 미래를 만들어갈 초기 창업자를 모십니다
+                  </p>
+                  <button
+                    type="button"
+                    onClick={() => openSectionModal("apply")}
+                    className="-mt-2 shrink-0 rounded-2xl bg-[#0f6a4b] px-8 py-2.5 text-base font-semibold tracking-wide text-white shadow-md shadow-emerald-950/20 transition hover:bg-[#0c5a40] active:bg-[#095239] sm:-mt-2.5 sm:px-11 sm:py-2.5 sm:text-lg md:px-12"
+                  >
+                    Apply Now
+                  </button>
+                </div>
               </div>
             </div>
           </motion.section>
         </main>
       </div>
-
-      <button
-        type="button"
-        onClick={() => openSectionModal("apply")}
-        className="fixed bottom-10 right-7 z-50 rounded-full bg-[#0f6a4b] px-7 py-3.5 text-[13px] font-semibold uppercase tracking-[0.2em] text-white shadow-lg shadow-emerald-950/30 transition hover:bg-[#0c5a40] active:bg-[#095239] md:bottom-14 md:right-11 md:px-10 md:py-[1.125rem] md:text-sm"
-      >
-        Apply
-      </button>
 
       {openSection &&
         createPortal(
