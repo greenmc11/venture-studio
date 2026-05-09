@@ -482,10 +482,10 @@ export default function Home() {
             initial="hidden"
             animate="visible"
             transition={{ duration: 0.55 }}
-            className="flex min-h-[calc(100vh-6rem)] flex-col justify-start pb-20 pt-2 md:min-h-[calc(100vh-5.5rem)] md:pb-24 md:pt-6 lg:pb-28 lg:pt-8"
+            className="flex min-h-[calc(100vh-6rem)] flex-col justify-start overflow-x-clip pb-20 pt-2 md:min-h-[calc(100vh-5.5rem)] md:pb-24 md:pt-6 lg:pb-28 lg:pt-8"
           >
-            <div className="mx-auto w-full max-w-6xl px-2">
-              <div className="flex w-full flex-col items-start">
+            <div className="mx-auto flex w-full max-w-7xl flex-col items-stretch gap-10 px-0 sm:px-1 lg:flex-row lg:items-start lg:gap-6 xl:gap-10">
+              <div className="relative z-20 flex min-w-0 flex-1 flex-col items-start lg:max-w-[min(100%,44rem)]">
                 <p className="mb-3 pl-[calc(0.5em-1em/3)] text-left font-sans text-xl font-semibold tracking-normal text-emerald-700 md:mb-4 md:text-2xl">
                   From Forecasting to Building
                 </p>
@@ -583,6 +583,31 @@ export default function Home() {
                   >
                     Apply Now
                   </button>
+                </div>
+              </div>
+
+              <div className="relative z-10 -mx-1 mt-2 hidden min-h-[min(78vh,760px)] w-full shrink-0 lg:sticky lg:top-28 lg:mx-0 lg:mt-2 lg:block lg:w-[min(38vw,480px)] xl:top-32 xl:w-[min(40vw,540px)]">
+                <div className="relative h-[min(78vh,760px)] w-full overflow-hidden rounded-2xl shadow-[0_20px_50px_-20px_rgba(15,60,45,0.18)] lg:h-[min(78vh,760px)] lg:rounded-l-[1.75rem] lg:rounded-r-3xl">
+                  <Image
+                    src="/demoday-2019-hero.png"
+                    alt="2019 IMPACT DEMO DAY — 소풍 데모데이"
+                    fill
+                    className="object-cover object-[52%_center]"
+                    sizes="(max-width: 1023px) 0px, (max-width: 1536px) 38vw, 540px"
+                    priority
+                  />
+                  <div
+                    className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#f3f5f7] from-[0%] via-[#f3f5f7]/90 via-[14%] to-transparent to-[46%]"
+                    aria-hidden
+                  />
+                  <div
+                    className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#f3f5f7]/35 from-0% via-transparent via-40% to-[#f3f5f7]/25 to-100%"
+                    aria-hidden
+                  />
+                  <div
+                    className="pointer-events-none absolute inset-0 bg-gradient-to-l from-transparent from-[72%] to-[#f3f5f7]/20 to-100%"
+                    aria-hidden
+                  />
                 </div>
               </div>
             </div>
