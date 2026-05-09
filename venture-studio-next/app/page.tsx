@@ -487,7 +487,7 @@ export default function Home() {
             <div className="mx-auto w-full max-w-6xl px-2">
               <div className="flex w-full flex-col items-start">
                 <p className="mb-3 pl-[calc(0.5em-1em/3)] text-left font-sans text-xl font-semibold tracking-normal text-emerald-700 md:mb-4 md:text-2xl">
-                  From Forecasting to Builng
+                  From Forecasting to Building
                 </p>
                 <h1 className="w-full font-hero-display text-left text-[clamp(2rem,4.75vw,3.75rem)] font-bold leading-[1.15] tracking-normal text-neutral-950">
                   미래를 예측하는 대신,{" "}
