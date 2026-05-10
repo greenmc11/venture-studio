@@ -482,10 +482,45 @@ export default function Home() {
             initial="hidden"
             animate="visible"
             transition={{ duration: 0.55 }}
-            className="flex min-h-[calc(100vh-6rem)] flex-col justify-start overflow-x-clip pb-20 pt-2 md:min-h-[calc(100vh-5.5rem)] md:pb-24 md:pt-6 lg:pb-28 lg:pt-8"
+            className="relative flex min-h-[calc(100vh-6rem)] flex-col justify-start overflow-x-visible pb-20 pt-2 md:min-h-[calc(100vh-5.5rem)] md:pb-24 md:pt-6 lg:pb-28 lg:pt-8"
           >
-            <div className="mx-auto flex w-full max-w-7xl flex-col items-stretch gap-10 px-0 sm:px-1 lg:flex-row lg:items-start lg:gap-6 xl:gap-10">
-              <div className="relative z-20 flex min-w-0 flex-1 flex-col items-start lg:max-w-[min(100%,44rem)]">
+            <div className="relative w-full">
+              <div
+                className="pointer-events-none absolute bottom-0 top-0 z-0 hidden overflow-hidden rounded-[clamp(2.5rem,8vw,4rem)] border-0 shadow-none ring-0 outline-none lg:left-[calc((100%-min(100%,72rem))/2+min(11ch,10.25rem)+0.08em)] lg:right-[calc((100vw_-_100%)_/_-2)] lg:block lg:w-auto"
+                aria-hidden
+                style={{
+                  WebkitMaskImage:
+                    "radial-gradient(ellipse 172% 124% at 56% 50%, rgba(0,0,0,0.48) 0%, rgba(0,0,0,0.3) 7%, rgba(0,0,0,0.14) 18%, rgba(0,0,0,0.06) 30%, rgba(0,0,0,0.02) 42%, rgba(0,0,0,0.006) 54%, transparent 68%, transparent 100%)",
+                  maskImage:
+                    "radial-gradient(ellipse 172% 124% at 56% 50%, rgba(0,0,0,0.48) 0%, rgba(0,0,0,0.3) 7%, rgba(0,0,0,0.14) 18%, rgba(0,0,0,0.06) 30%, rgba(0,0,0,0.02) 42%, rgba(0,0,0,0.006) 54%, transparent 68%, transparent 100%)",
+                  WebkitMaskSize: "100% 100%",
+                  maskSize: "100% 100%",
+                  WebkitMaskRepeat: "no-repeat",
+                  maskRepeat: "no-repeat",
+                }}
+              >
+                <div className="relative h-full min-h-full w-full transform-gpu">
+                  <Image
+                    src="/demoday-2019-hero.png"
+                    alt=""
+                    fill
+                    sizes="(max-width: 1023px) 0px, 100vw"
+                    priority
+                    className="border-0 object-cover object-[58%_center] opacity-[0.92] [filter:grayscale(1)_saturate(0)_brightness(0.92)_contrast(1.06)] [transform:translateZ(0)_scale(1.09)]"
+                  />
+                  <div
+                    className="absolute inset-0 bg-[radial-gradient(ellipse_172%_124%_at_56%_50%,transparent_40%,rgba(243,245,247,0.012)_54%,rgba(243,245,247,0.04)_66%,rgba(243,245,247,0.08)_76%,rgba(243,245,247,0.14)_85%,rgba(243,245,247,0.22)_92%,rgba(243,245,247,0.34)_97%,rgba(243,245,247,0.48)_100%)]"
+                    aria-hidden
+                  />
+                  <div
+                    className="absolute inset-0 bg-[linear-gradient(90deg,rgba(243,245,247,0.82)_0%,rgba(243,245,247,0.58)_4%,rgba(243,245,247,0.34)_10%,rgba(243,245,247,0.16)_17%,rgba(243,245,247,0.06)_24%,rgba(243,245,247,0.015)_32%,transparent_42%,transparent_82%,rgba(243,245,247,0.03)_88%,rgba(243,245,247,0.12)_94%,rgba(243,245,247,0.34)_100%)]"
+                    aria-hidden
+                  />
+                </div>
+              </div>
+
+              <div className="relative z-10 mx-auto w-full max-w-6xl px-2">
+              <div className="flex w-full flex-col items-start">
                 <p className="mb-3 pl-[calc(0.5em-1em/3)] text-left font-sans text-xl font-semibold tracking-normal text-emerald-700 md:mb-4 md:text-2xl">
                   From Forecasting to Building
                 </p>
@@ -572,7 +607,7 @@ export default function Home() {
                   </p>
                 </div>
 
-                <div className="mt-24 flex w-full max-w-5xl flex-col items-start gap-5 sm:mt-28 sm:flex-row sm:items-start sm:gap-8 md:mt-32 md:gap-10">
+                <div className="mt-12 flex w-full max-w-5xl flex-col items-start gap-5 sm:mt-14 sm:flex-row sm:items-start sm:gap-8 md:mt-16 md:gap-10">
                   <p className="max-w-3xl text-left text-[1.35rem] font-bold leading-snug tracking-tight text-[#1565c0] sm:text-[1.45rem] md:text-2xl md:leading-tight lg:text-[1.7rem]">
                     소풍 벤처스와 함께 미래를 만들어갈 초기 창업자를 모십니다
                   </p>
@@ -585,31 +620,7 @@ export default function Home() {
                   </button>
                 </div>
               </div>
-
-              <div className="relative z-10 -mx-1 mt-2 hidden min-h-[min(78vh,760px)] w-full shrink-0 lg:sticky lg:top-28 lg:mx-0 lg:mt-2 lg:block lg:w-[min(38vw,480px)] xl:top-32 xl:w-[min(40vw,540px)]">
-                <div className="relative h-[min(78vh,760px)] w-full overflow-hidden rounded-2xl shadow-[0_20px_50px_-20px_rgba(15,60,45,0.18)] lg:h-[min(78vh,760px)] lg:rounded-l-[1.75rem] lg:rounded-r-3xl">
-                  <Image
-                    src="/demoday-2019-hero.png"
-                    alt="2019 IMPACT DEMO DAY — 소풍 데모데이"
-                    fill
-                    className="object-cover object-[52%_center]"
-                    sizes="(max-width: 1023px) 0px, (max-width: 1536px) 38vw, 540px"
-                    priority
-                  />
-                  <div
-                    className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#f3f5f7] from-[0%] via-[#f3f5f7]/90 via-[14%] to-transparent to-[46%]"
-                    aria-hidden
-                  />
-                  <div
-                    className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#f3f5f7]/35 from-0% via-transparent via-40% to-[#f3f5f7]/25 to-100%"
-                    aria-hidden
-                  />
-                  <div
-                    className="pointer-events-none absolute inset-0 bg-gradient-to-l from-transparent from-[72%] to-[#f3f5f7]/20 to-100%"
-                    aria-hidden
-                  />
-                </div>
-              </div>
+            </div>
             </div>
           </motion.section>
         </main>
