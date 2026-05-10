@@ -482,11 +482,11 @@ export default function Home() {
             initial="hidden"
             animate="visible"
             transition={{ duration: 0.55 }}
-            className="relative flex min-h-[calc(100vh-6rem)] flex-col justify-start overflow-x-visible pb-20 pt-2 md:min-h-[calc(100vh-5.5rem)] md:pb-24 md:pt-6 lg:pb-28 lg:pt-8"
+            className="relative flex min-h-[calc(100vh-6rem)] flex-col justify-start max-lg:overflow-x-clip overflow-x-visible pb-20 pt-2 md:min-h-[calc(100vh-5.5rem)] md:pb-24 md:pt-6 lg:pb-28 lg:pt-8"
           >
             <div className="relative w-full">
               <div
-                className="pointer-events-none absolute bottom-0 top-0 z-0 hidden overflow-hidden rounded-[clamp(2.5rem,8vw,4rem)] border-0 shadow-none ring-0 outline-none lg:left-[calc((100%-min(100%,72rem))/2+min(11ch,10.25rem)+0.08em)] lg:right-[calc((100vw_-_100%)_/_-2)] lg:block lg:w-auto"
+                className="pointer-events-none absolute bottom-0 top-0 z-0 block w-[100vw] max-w-none -translate-x-1/2 overflow-hidden rounded-[clamp(2.5rem,8vw,4rem)] border-0 shadow-none ring-0 outline-none left-1/2 lg:left-[calc((100%-min(100%,72rem))/2+min(11ch,10.25rem)+0.08em)] lg:right-[calc((100vw_-_100%)_/_-2)] lg:w-auto lg:translate-x-0"
                 aria-hidden
                 style={{
                   WebkitMaskImage:
@@ -504,7 +504,7 @@ export default function Home() {
                     src="/demoday-2019-hero.png"
                     alt=""
                     fill
-                    sizes="(max-width: 1023px) 0px, 100vw"
+                    sizes="100vw"
                     priority
                     className="border-0 object-cover object-[58%_center] opacity-[0.92] [filter:grayscale(1)_saturate(0)_brightness(0.92)_contrast(1.06)] [transform:translateZ(0)_scale(1.09)]"
                   />
@@ -514,6 +514,10 @@ export default function Home() {
                   />
                   <div
                     className="absolute inset-0 bg-[linear-gradient(90deg,rgba(243,245,247,0.82)_0%,rgba(243,245,247,0.58)_4%,rgba(243,245,247,0.34)_10%,rgba(243,245,247,0.16)_17%,rgba(243,245,247,0.06)_24%,rgba(243,245,247,0.015)_32%,transparent_42%,transparent_82%,rgba(243,245,247,0.03)_88%,rgba(243,245,247,0.12)_94%,rgba(243,245,247,0.34)_100%)]"
+                    aria-hidden
+                  />
+                  <div
+                    className="absolute inset-0 bg-[linear-gradient(180deg,rgba(243,245,247,0.82)_0%,rgba(243,245,247,0.48)_8%,rgba(243,245,247,0.24)_14%,rgba(243,245,247,0.08)_22%,transparent_34%,transparent_58%,rgba(243,245,247,0.08)_68%,rgba(243,245,247,0.24)_78%,rgba(243,245,247,0.48)_88%,rgba(243,245,247,0.82)_100%)]"
                     aria-hidden
                   />
                 </div>
